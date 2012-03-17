@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Users\Kudos\Desktop\fluent-build\src\FluentBuild\bin\Debug\FluentBuild.dll" total="220" errors="0" failures="0" not-run="1" inconclusive="0" ignored="1" skipped="0" invalid="0" date="2010-10-19" time="14:38:31">
+  <environment nunit-version="2.5.7.10213" clr-version="2.0.50727.4952" os-version="Microsoft Windows NT 6.1.7600.0" platform="Win32NT" cwd="C:\Users\Kudos\Desktop\fluent-build\tools\nunit" machine-name="KUDOS-LAPTOP" user="Kudos" user-domain="Kudos-Laptop" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="C:\Users\Kudos\Desktop\fluent-build\src\FluentBuild\bin\Debug\FluentBuild.dll" executed="True" result="Success" success="True" time="4.433" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="FluentBuild" executed="True" result="Success" success="True" time="4.414" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="ApplicationProperties" executed="True" result="Success" success="True" time="0.746" asserts="0">
+            <results>
+              <test-suite type="TestFixture" name="CommandLinePropertiesTests" executed="True" result="Success" success="True" time="0.103" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.ApplicationProperties.CommandLinePropertiesTests.ShouldConstructWithProperties" executed="True" result="Success" success="True" time="0.053" asserts="1" />
+                  <test-case name="FluentBuild.ApplicationProperties.CommandLinePropertiesTests.ShouldGetAndSetProperly" executed="True" result="Success" success="True" time="0.015" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="CruiseControlPropertiesTests" executed="True" result="Success" success="True" time="0.041" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.ApplicationProperties.CruiseControlPropertiesTests.AllPropertiesShouldMap" executed="True" result="Success" success="True" time="0.040" asserts="10" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="TeamCityPropertiesTests" executed="True" result="Success" success="True" time="0.586" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.ApplicationProperties.TeamCityPropertiesTests.BuildNumberShouldCallToWrapper" executed="True" result="Success" success="True" time="0.565" asserts="0" />
+                  <test-case name="FluentBuild.ApplicationProperties.TeamCityPropertiesTests.ConfigurationNameShouldCallToWrapper" executed="True" result="Success" success="True" time="0.004" asserts="0" />
+                  <test-case name="FluentBuild.ApplicationProperties.TeamCityPropertiesTests.ProjectName" executed="True" result="Success" success="True" time="0.004" asserts="0" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+          <test-suite type="Namespace" name="AssemblyInfoBuilding" executed="True" result="Success" success="True" time="0.056" asserts="0">
+            <results>
+              <test-suite type="TestFixture" name="AssemblyInfoDetailsTests" executed="True" result="Success" success="True" time="0.007" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.AssemblyInfoBuilding.AssemblyInfoDetailsTests.ImportShouldNotAllowDuplicates" executed="True" result="Success" success="True" time="0.006" asserts="2" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="AssemblyInfoLanguageTests" executed="True" result="Success" success="True" time="0.011" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.AssemblyInfoBuilding.AssemblyInfoLanguageTests.EnsureCSharpLanguageBuildsProperly" executed="True" result="Success" success="True" time="0.005" asserts="3" />
+                  <test-case name="FluentBuild.AssemblyInfoBuilding.AssemblyInfoLanguageTests.EnsureVisualBasicLanguageBuildsProperly" executed="True" result="Success" success="True" time="0.003" asserts="3" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="CSharpAssemblyInfoBuilderTests" executed="True" result="Success" success="True" time="0.018" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.AssemblyInfoBuilding.CSharpAssemblyInfoBuilderTests.ShouldBuildString" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="VisualBasicAssemblyInfoBuilderTests" executed="True" result="Success" success="True" time="0.010" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.AssemblyInfoBuilding.VisualBasicAssemblyInfoBuilderTests.ShouldBuildString" executed="True" result="Success" success="True" time="0.009" asserts="1" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+          <test-suite type="Namespace" name="Compilation" executed="True" result="Success" success="True" time="0.439" asserts="0">
+            <results>
+              <test-suite type="TestFixture" name="BuildTaskTests" executed="True" result="Success" success="True" time="0.085" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.Compilation.BuildTaskTests.AddResource_ShouldAddSingleFileResource" executed="True" result="Success" success="True" time="0.011" asserts="3" />
+                  <test-case name="FluentBuild.Compilation.BuildTaskTests.Args_ShouldCreateProperArgs" executed="True" result="Success" success="True" time="0.010" asserts="1" />
+                  <test-case name="FluentBuild.Compilation.BuildTaskTests.Args_ShouldCreateProperArgs_With_Fileset_Resources" executed="True" result="Success" success="True" time="0.026" asserts="1" />
+                  <test-case name="FluentBuild.Compilation.BuildTaskTests.Args_ShouldCreateProperArgs_With_Resources" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                  <test-case name="FluentBuild.Compilation.BuildTaskTests.Args_ShouldCreateProperArgs_With_Sources" executed="True" result="Success" success="True" time="0.005" asserts="1" />
+                  <test-case name="FluentBuild.Compilation.BuildTaskTests.Args_ShouldCreateProperArgs_With_Sources_And_Debug_Symbols" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                  <test-case name="FluentBuild.Compilation.BuildTaskTests.Args_ShouldCreateProperReferences" executed="True" result="Success" success="True" time="0.007" asserts="1" />
+                  <test-case name="FluentBuild.Compilation.BuildTaskTests.OutputFileTo_ShouldWorkWithBuildArtifact" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                  <test-case name="FluentBuild.Compilation.BuildTaskTests.UsingCsc_Compiler_Should_Be_CSC" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="FluentBuild.Compilation.BuildTaskTests.UsingCsc_Compiler_Should_Be_VBC" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="MsBuildTaskTests" executed="True" result="Success" success="True" time="0.258" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.Compilation.MsBuildTaskTests.BuildArgs_ShouldAddConfigurationIfSpecified" executed="True" result="Success" success="True" time="0.121" asserts="1" />
+                  <test-case name="FluentBuild.Compilation.MsBuildTaskTests.BuildArgs_ShouldHaveFirstArgAsProjectOrSolution" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                  <test-case name="FluentBuild.Compilation.MsBuildTaskTests.BuildArgs_ShouldHaveTarget" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                  <test-case name="FluentBuild.Compilation.MsBuildTaskTests.BuildArgs_ShouldNotHaveConfigurationIfNoneSpecified" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                  <test-case name="FluentBuild.Compilation.MsBuildTaskTests.BuildArgs_ShouldSetOutDirIfTrailingSlashIsNotSet" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                  <test-case name="FluentBuild.Compilation.MsBuildTaskTests.BuildArgs_ShouldSetOutDirIfTrailingSlashIsSet" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="FluentBuild.Compilation.MsBuildTaskTests.Execute_ShouldExecuteMsBuild" executed="True" result="Success" success="True" time="0.095" asserts="0" />
+                  <test-case name="FluentBuild.Compilation.MsBuildTaskTests.OutputDirectory_ShouldSetDir" executed="True" result="Success" success="True" time="0.004" asserts="1" />
+                  <test-case name="FluentBuild.Compilation.MsBuildTaskTests.ShouldSetConfiguration" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                  <test-case name="FluentBuild.Compilation.MsBuildTaskTests.ShouldSetOutDir" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="FluentBuild.Compilation.MsBuildTaskTests.ShouldSetProperty" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                  <test-case name="FluentBuild.Compilation.MsBuildTaskTests.ShouldSetSolutionPath" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="FluentBuild.Compilation.MsBuildTaskTests.ShouldSetTarget" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="ResgenTests" executed="True" result="Success" success="True" time="0.054" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.Compilation.ResgenTests.Execute_ShouldRunAgainstMock" executed="True" result="Success" success="True" time="0.037" asserts="0" />
+                  <test-case name="FluentBuild.Compilation.ResgenTests.GenerateFrom_ShouldPopulateFiles" executed="True" result="Success" success="True" time="0.003" asserts="2" />
+                  <test-case name="FluentBuild.Compilation.ResgenTests.OutputTo_ShouldPopulatePathAndNotBeNull" executed="True" result="Success" success="True" time="0.002" asserts="2" />
+                  <test-case name="FluentBuild.Compilation.ResgenTests.PrefixOutputsWith_ShouldSetPrefixProperly" executed="True" result="Success" success="True" time="0.003" asserts="2" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="ResourceTests" executed="True" result="Success" success="True" time="0.009" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.Compilation.ResourceTests.CreateShouldBuildProperly" executed="True" result="Success" success="True" time="0.002" asserts="2" />
+                  <test-case name="FluentBuild.Compilation.ResourceTests.IfEmptyNameThenJustValueShouldBeReturned" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="FluentBuild.Compilation.ResourceTests.ShouldCreateQuotedString" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="TargetTests" executed="True" result="Success" success="True" time="0.015" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.Compilation.TargetTests.CreateExe" executed="True" result="Success" success="True" time="0.003" asserts="2" />
+                  <test-case name="FluentBuild.Compilation.TargetTests.CreateLibrary" executed="True" result="Success" success="True" time="0.001" asserts="2" />
+                  <test-case name="FluentBuild.Compilation.TargetTests.CreateModule" executed="True" result="Success" success="True" time="0.003" asserts="2" />
+                  <test-case name="FluentBuild.Compilation.TargetTests.CreateWindowsExe" executed="True" result="Success" success="True" time="0.003" asserts="2" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+          <test-suite type="Namespace" name="Core" executed="True" result="Success" success="True" time="0.411" asserts="0">
+            <results>
+              <test-suite type="TestFixture" name="AssemblyInfoTests" executed="True" result="Success" success="True" time="0.004" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.Core.AssemblyInfoTests.MethodCallShouldNotThrowException" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Build_Tests" executed="True" result="Success" success="True" time="0.008" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.Core.Build_Tests.ShouldCreateMsBuildTask" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                  <test-case name="FluentBuild.Core.Build_Tests.ShouldCreateTaskWithCSCCompiler" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="FluentBuild.Core.Build_Tests.ShouldCreateTaskWithVbCompiler" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="BuildArtifactTests" executed="True" result="Success" success="True" time="0.080" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.Core.BuildArtifactTests.Copy_ShouldCreateCopyObject" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                  <test-case name="FluentBuild.Core.BuildArtifactTests.Delete_ShouldCallToFileSystemWrapper" executed="True" result="Success" success="True" time="0.060" asserts="0" />
+                  <test-case name="FluentBuild.Core.BuildArtifactTests.Move_ShouldCreateMoveObject" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                  <test-case name="FluentBuild.Core.BuildArtifactTests.Rename_ShouldBuildRenameObject" executed="True" result="Success" success="True" time="0.004" asserts="1" />
+                  <test-case name="FluentBuild.Core.BuildArtifactTests.ToString_Should_Output_Path" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="BuildFileTests" executed="True" result="Success" success="True" time="0.019" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.Core.BuildFileTests.BuildCountShouldBeCorrect" executed="True" result="Success" success="True" time="0.010" asserts="1" />
+                  <test-case name="FluentBuild.Core.BuildFileTests.TestThatQueueGetsProcessed" executed="True" result="Success" success="True" time="0.007" asserts="3" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="FileSetTests" executed="True" result="Success" success="True" time="0.100" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.Core.FileSetTests.AddAllCsFiles" executed="True" result="Success" success="True" time="0.045" asserts="2" />
+                  <test-case name="FluentBuild.Core.FileSetTests.AddAllCsFilesAndExcludeSpecificFileName" executed="True" result="Success" success="True" time="0.005" asserts="1" />
+                  <test-case name="FluentBuild.Core.FileSetTests.BuildFileSetFromArtifact" executed="True" result="Success" success="True" time="0.005" asserts="2" />
+                  <test-case name="FluentBuild.Core.FileSetTests.CopyShouldNotBeNull" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                  <test-case name="FluentBuild.Core.FileSetTests.DetermineActualFiles_ShouldProcessSingleFile" executed="True" result="Success" success="True" time="0.005" asserts="1" />
+                  <test-case name="FluentBuild.Core.FileSetTests.Exclude_RecurseAllSubfolders_ShouldSetPending" executed="True" result="Success" success="True" time="0.005" asserts="1" />
+                  <test-case name="FluentBuild.Core.FileSetTests.Include_RecurseAllSubfolders_ShouldSetPending" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                  <test-case name="FluentBuild.Core.FileSetTests.Include_ShouldLoadCollection" executed="True" result="Success" success="True" time="0.002" asserts="2" />
+                  <test-case name="FluentBuild.Core.FileSetTests.ProcessPending_ShouldClearPendings" executed="True" result="Success" success="True" time="0.003" asserts="4" />
+                  <test-case name="FluentBuild.Core.FileSetTests.RecurseAllSubfoldersShouldWork" executed="True" result="Success" success="True" time="0.003" asserts="0" />
+                  <test-case name="FluentBuild.Core.FileSetTests.ShouldNotAddDirectory" executed="True" result="Success" success="True" time="0.003" asserts="2" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="MessageLoggerTests" executed="True" result="Success" success="True" time="0.131" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.Core.MessageLoggerTests.SetLogger_ShouldSetLoggerToConsoleLogger" executed="True" result="Success" success="True" time="0.040" asserts="1" />
+                  <test-case name="FluentBuild.Core.MessageLoggerTests.SetLogger_ShouldSetLoggerToTeamCityLogger" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                  <test-case name="FluentBuild.Core.MessageLoggerTests.SetLogger_ShouldThrowExceptionIfUnkownType" executed="True" result="Success" success="True" time="0.012" asserts="0" />
+                  <test-case name="FluentBuild.Core.MessageLoggerTests.UsingDebug_DebugLevelsSholdChange" executed="True" result="Success" success="True" time="0.005" asserts="2" />
+                  <test-case name="FluentBuild.Core.MessageLoggerTests.UsingDebug_ShouldOnlyWriteOneDebugMessage" executed="True" result="Success" success="True" time="0.019" asserts="0" />
+                  <test-case name="FluentBuild.Core.MessageLoggerTests.WriteDebugMessage_ShouldNotWriteIfVerbosityIsLessThanFull" executed="True" result="Success" success="True" time="0.006" asserts="0" />
+                  <test-case name="FluentBuild.Core.MessageLoggerTests.WriteDebugMessage_ShouldWriteIfVerbosityIsFull" executed="True" result="Success" success="True" time="0.003" asserts="0" />
+                  <test-case name="FluentBuild.Core.MessageLoggerTests.WriteError_ShouldWriteCustomPrefix" executed="True" result="Success" success="True" time="0.005" asserts="0" />
+                  <test-case name="FluentBuild.Core.MessageLoggerTests.WriteError_ShouldWriteIfVerbosityIsNone" executed="True" result="Success" success="True" time="0.004" asserts="0" />
+                  <test-case name="FluentBuild.Core.MessageLoggerTests.WriteHeader_ShouldNotWriteIfVerbosityIsNone" executed="True" result="Success" success="True" time="0.004" asserts="0" />
+                  <test-case name="FluentBuild.Core.MessageLoggerTests.WriteHeader_ShouldWriteIfVerbosityIsFull" executed="True" result="Success" success="True" time="0.003" asserts="0" />
+                  <test-case name="FluentBuild.Core.MessageLoggerTests.WriteTestStarted_ShouldCallInternalLogger" executed="True" result="Success" success="True" time="0.005" asserts="0" />
+                  <test-case name="FluentBuild.Core.MessageLoggerTests.WriteWarning_ShouldWriteCustomPrefix" executed="True" result="Success" success="True" time="0.006" asserts="0" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="PropertiesTests" executed="True" result="Success" success="True" time="0.012" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.Core.PropertiesTests.CommandLineShouldReturnProperObject" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="FluentBuild.Core.PropertiesTests.CruiseControlShouldReturnProperObject" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                  <test-case name="FluentBuild.Core.PropertiesTests.CurrentDirectoryShouldBeProper" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                  <test-case name="FluentBuild.Core.PropertiesTests.TeamCityShouldReturnProperObject" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="PublishTests" executed="True" result="Success" success="True" time="0.004" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.Core.PublishTests.ToGoogleCode" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="RunTests" executed="True" result="Success" success="True" time="0.020" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.Core.RunTests.Run_Should_Populate_Exe" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                  <test-case name="FluentBuild.Core.RunTests.Run_Should_Populate_Exe_When_Using_Build_Artifact" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                  <test-case name="FluentBuild.Core.RunTests.Run_ShouldCreateObject" executed="True" result="Success" success="True" time="0.005" asserts="1" />
+                  <test-case name="FluentBuild.Core.RunTests.UnitTestFramework_ShouldCreateObject" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                  <test-case name="FluentBuild.Core.RunTests.Zip_ShouldCreateObject" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+          <test-suite type="Namespace" name="Database" executed="True" result="Success" success="True" time="0.663" asserts="0">
+            <results>
+              <test-suite type="TestFixture" name="DatabaseTests" executed="True" result="Success" success="True" time="0.003" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.Database.DatabaseTests.ShouldCreateProperObject" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="MsSqlConnectionTests" executed="True" result="Success" success="True" time="0.551" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.Database.MsSqlConnectionTests.ShouldCreateMsSqlUtilities" executed="True" result="Success" success="True" time="0.511" asserts="1" />
+                  <test-case name="FluentBuild.Database.MsSqlConnectionTests.ShouldCreateMsSqlUtilitiesAndHaveEngineBuilt" executed="True" result="Success" success="True" time="0.037" asserts="3" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="MsSqlCreateOrUpdateTests" executed="True" result="Success" success="True" time="0.054" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.Database.MsSqlCreateOrUpdateTests.ShouldSetPropertyOnEngine" executed="True" result="Success" success="True" time="0.053" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="MsSqlCreateTests" executed="True" result="Success" success="True" time="0.007" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.Database.MsSqlCreateTests.ShouldSetPathOnEngine" executed="True" result="Success" success="True" time="0.006" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="MsSqlUpdateTests" executed="True" result="Success" success="True" time="0.007" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.Database.MsSqlUpdateTests.VersionTable_ShouldSetVersionOnEngine" executed="True" result="Success" success="True" time="0.007" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="MsSqlUtilitiesTests" executed="True" result="Success" success="True" time="0.016" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.Database.MsSqlUtilitiesTests.CreateOrUpdate_ShouldCreateProperType" executed="True" result="Success" success="True" time="0.006" asserts="1" />
+                  <test-case name="FluentBuild.Database.MsSqlUtilitiesTests.DoesDatabaseAlreadyExist_ShouldCallUnderlyingEngine" executed="True" result="Success" success="True" time="0.008" asserts="0" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="MsSqlVersionTableTests" executed="True" result="Success" success="True" time="0.006" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.Database.MsSqlVersionTableTests.ExecuteShouldCallUnderlyingEngine" executed="True" result="Success" success="True" time="0.006" asserts="0" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+          <test-suite type="Namespace" name="FilesAndDirectories" executed="True" result="Success" success="True" time="0.628" asserts="0">
+            <results>
+              <test-suite type="TestFixture" name="BuildFolderTests" executed="True" result="Success" success="True" time="0.178" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.FilesAndDirectories.BuildFolderTests.Create_Should_Build_File" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="FluentBuild.FilesAndDirectories.BuildFolderTests.Create_Should_Build_SubFolder" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                  <test-case name="FluentBuild.FilesAndDirectories.BuildFolderTests.Create_Should_Have_Path" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="FluentBuild.FilesAndDirectories.BuildFolderTests.CreateDirecory_ShouldCallWrapper" executed="True" result="Success" success="True" time="0.018" asserts="0" />
+                  <test-case name="FluentBuild.FilesAndDirectories.BuildFolderTests.DeleteDirecory_ShouldDeleteIfFolderExists" executed="True" result="Success" success="True" time="0.028" asserts="0" />
+                  <test-case name="FluentBuild.FilesAndDirectories.BuildFolderTests.Files_ShouldCreateFileset" executed="True" result="Success" success="True" time="0.091" asserts="0" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="CopyBuildArtifactTests" executed="True" result="Success" success="True" time="0.074" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.FilesAndDirectories.CopyBuildArtifactTests.ArtifactCopyShouldRenameFile" executed="True" result="Success" success="True" time="0.011" asserts="0" />
+                  <test-case name="FluentBuild.FilesAndDirectories.CopyBuildArtifactTests.BuildFolderCopyShouldMoveToNewFolder" executed="True" result="Success" success="True" time="0.012" asserts="0" />
+                  <test-case name="FluentBuild.FilesAndDirectories.CopyBuildArtifactTests.PerformTokenReplacement" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+                  <test-case name="FluentBuild.FilesAndDirectories.CopyBuildArtifactTests.StringCopyShouldRenameFile" executed="True" result="Success" success="True" time="0.018" asserts="0" />
+                </results>
+              </test-suite>
+              <test-suite type="Namespace" name="FileSet" executed="True" result="Success" success="True" time="0.183" asserts="0">
+                <results>
+                  <test-suite type="TestFixture" name="CopyFilesetTests" executed="True" result="Success" success="True" time="0.022" asserts="0">
+                    <results>
+                      <test-case name="FluentBuild.FilesAndDirectories.FileSet.CopyFilesetTests.To_ShouldPerformCopy" executed="True" result="Success" success="True" time="0.012" asserts="0" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="FileSystemUtilityTests" executed="True" result="Success" success="True" time="0.084" asserts="0">
+                    <results>
+                      <test-case name="FluentBuild.FilesAndDirectories.FileSet.FileSystemUtilityTests.Should_Call_Parser_For_Path_Containing_Wildcard" executed="True" result="Success" success="True" time="0.076" asserts="0" />
+                      <test-case name="FluentBuild.FilesAndDirectories.FileSet.FileSystemUtilityTests.Should_Not_Call_Parser_For_Path_Containing_No_Wildcards" executed="True" result="Success" success="True" time="0.003" asserts="0" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="SearchPatternParserTests" executed="True" result="Success" success="True" time="0.065" asserts="0">
+                    <results>
+                      <test-case name="FluentBuild.FilesAndDirectories.FileSet.SearchPatternParserTests.GetAllFilesMatching_JustDirectory" executed="True" result="Success" success="True" time="0.009" asserts="3" />
+                      <test-case name="FluentBuild.FilesAndDirectories.FileSet.SearchPatternParserTests.GetAllFilesMatching_Name_And_WildCard" executed="True" result="Success" success="True" time="0.036" asserts="3" />
+                      <test-case name="FluentBuild.FilesAndDirectories.FileSet.SearchPatternParserTests.GetAllFilesMatching_Recursive_Name_And_WildCard" executed="True" result="Success" success="True" time="0.002" asserts="3" />
+                      <test-case name="FluentBuild.FilesAndDirectories.FileSet.SearchPatternParserTests.GetAllFilesMatching_Recursive_Start_Dot_CS_Filter" executed="True" result="Success" success="True" time="0.002" asserts="3" />
+                      <test-case name="FluentBuild.FilesAndDirectories.FileSet.SearchPatternParserTests.GetAllFilesMatching_Star_Dot_CS_Filter_WithDoubleSlashes" executed="True" result="Success" success="True" time="0.002" asserts="3" />
+                      <test-case name="FluentBuild.FilesAndDirectories.FileSet.SearchPatternParserTests.GetAllFilesMatching_Start_Dot_CS_Filter" executed="True" result="Success" success="True" time="0.002" asserts="3" />
+                      <test-case name="FluentBuild.FilesAndDirectories.FileSet.SearchPatternParserTests.GetAllFilesMatching_Start_Dot_Start_Filter" executed="True" result="Success" success="True" time="0.002" asserts="3" />
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="MoveBuildArtifactTests" executed="True" result="Success" success="True" time="0.022" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.FilesAndDirectories.MoveBuildArtifactTests.ShouldCopyToDestinationAndFileNameWhenOnlyDestinationFolderUsed" executed="True" result="Success" success="True" time="0.011" asserts="0" />
+                  <test-case name="FluentBuild.FilesAndDirectories.MoveBuildArtifactTests.ToShouldCallWrapper" executed="True" result="Success" success="True" time="0.002" asserts="0" />
+                  <test-case name="FluentBuild.FilesAndDirectories.MoveBuildArtifactTests.ToShouldCallWrapperUsingBuildArtifact" executed="True" result="Success" success="True" time="0.004" asserts="0" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="RenameBuildArtifactTests" executed="True" result="Success" success="True" time="0.131" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.FilesAndDirectories.RenameBuildArtifactTests.PathShouldBeChangedAfterRename" executed="True" result="Success" success="True" time="0.011" asserts="1" />
+                  <test-case name="FluentBuild.FilesAndDirectories.RenameBuildArtifactTests.ShouildContinueOnError" executed="True" result="Success" success="True" time="0.088" asserts="0" />
+                  <test-case name="FluentBuild.FilesAndDirectories.RenameBuildArtifactTests.ShouldCallWrapperMoveFile" executed="True" result="Success" success="True" time="0.012" asserts="0" />
+                  <test-case name="FluentBuild.FilesAndDirectories.RenameBuildArtifactTests.ShouldFailOnError" executed="True" result="Success" success="True" time="0.008" asserts="0" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+          <test-suite type="Namespace" name="FrameworkFinders" executed="True" result="Success" success="True" time="0.124" asserts="0">
+            <results>
+              <test-suite type="TestFixture" name="DefaultFinderTests" executed="True" result="Success" success="True" time="0.123" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.FrameworkFinders.DefaultFinderTests.FrameworkSearchPaths_ShouldReturnStringList" executed="True" result="Success" success="True" time="0.046" asserts="1" />
+                  <test-case name="FluentBuild.FrameworkFinders.DefaultFinderTests.PathToFrameworkInstall_ShouldReturnNullIfKeyNotFound" executed="True" result="Success" success="True" time="0.023" asserts="1" />
+                  <test-case name="FluentBuild.FrameworkFinders.DefaultFinderTests.PathToFrameworkInstall_ShouldReturnValueIfKeyFound" executed="True" result="Success" success="True" time="0.005" asserts="1" />
+                  <test-case name="FluentBuild.FrameworkFinders.DefaultFinderTests.PathToSDKInstall_ShouldReturnNullIfKeyNotFound" executed="True" result="Success" success="True" time="0.006" asserts="1" />
+                  <test-case name="FluentBuild.FrameworkFinders.DefaultFinderTests.PathToSDKInstall_ShouldReturnValueIfKeyFound" executed="True" result="Success" success="True" time="0.005" asserts="1" />
+                  <test-case name="FluentBuild.FrameworkFinders.DefaultFinderTests.SDKSearchPaths_ShouldReturnStringList" executed="True" result="Success" success="True" time="0.006" asserts="1" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+          <test-suite type="Namespace" name="MessageLoggers" executed="True" result="Success" success="True" time="0.435" asserts="0">
+            <results>
+              <test-suite type="Namespace" name="ConsoleMessageLoggers" executed="True" result="Success" success="True" time="0.075" asserts="0">
+                <results>
+                  <test-suite type="TestFixture" name="ConsoleMessageLoggerTests" executed="True" result="Success" success="True" time="0.035" asserts="0">
+                    <results>
+                      <test-case name="FluentBuild.MessageLoggers.ConsoleMessageLoggers.ConsoleMessageLoggerTests.WrapText_ShouldHandleNewLines" executed="True" result="Success" success="True" time="0.006" asserts="3" />
+                      <test-case name="FluentBuild.MessageLoggers.ConsoleMessageLoggers.ConsoleMessageLoggerTests.WrapText_ShouldHaveOneLine" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                      <test-case name="FluentBuild.MessageLoggers.ConsoleMessageLoggers.ConsoleMessageLoggerTests.WrapText_ShouldHaveTwoLines" executed="True" result="Success" success="True" time="0.002" asserts="2" />
+                      <test-case name="FluentBuild.MessageLoggers.ConsoleMessageLoggers.ConsoleMessageLoggerTests.Write_ShouldCreateProperlyIndentedLines" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                      <test-case name="FluentBuild.MessageLoggers.ConsoleMessageLoggers.ConsoleMessageLoggerTests.WriteDebug_ShouldWriteErrorMessage" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                      <test-case name="FluentBuild.MessageLoggers.ConsoleMessageLoggers.ConsoleMessageLoggerTests.WriteError_ShouldWriteErrorMessage" executed="True" result="Success" success="True" time="0.005" asserts="1" />
+                      <test-case name="FluentBuild.MessageLoggers.ConsoleMessageLoggers.ConsoleMessageLoggerTests.WriteHeader" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                      <test-case name="FluentBuild.MessageLoggers.ConsoleMessageLoggers.ConsoleMessageLoggerTests.WriteTestSuiteStarted_ShouldCreateTestSuiteObject" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                      <test-case name="FluentBuild.MessageLoggers.ConsoleMessageLoggers.ConsoleMessageLoggerTests.WriteWarning_ShouldWriteMessage" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="TestLoggerTests" executed="True" result="Success" success="True" time="0.019" asserts="0">
+                    <results>
+                      <test-case name="FluentBuild.MessageLoggers.ConsoleMessageLoggers.TestLoggerTests.WriteMessage_ShouldNotAddDotsIfMessageIsTooLong" executed="True" result="Success" success="True" time="0.005" asserts="1" />
+                      <test-case name="FluentBuild.MessageLoggers.ConsoleMessageLoggers.TestLoggerTests.WriteTestFailed_ShouldOutputTestFailedAndFinishedMessage" executed="True" result="Success" success="True" time="0.004" asserts="1" />
+                      <test-case name="FluentBuild.MessageLoggers.ConsoleMessageLoggers.TestLoggerTests.WriteTestIgnored_ShouldOutputTestIgnoredAndFinishedMessage" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                      <test-case name="FluentBuild.MessageLoggers.ConsoleMessageLoggers.TestLoggerTests.WriteTestPassed_ShouldOutputTestFinishedMessage" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="TestSuiteLoggerTests" executed="True" result="Success" success="True" time="0.011" asserts="0">
+                    <results>
+                      <test-case name="FluentBuild.MessageLoggers.ConsoleMessageLoggers.TestSuiteLoggerTests.WriteFinished_ShouldNotWriteAnything" executed="True" result="Success" success="True" time="0.003" asserts="2" />
+                      <test-case name="FluentBuild.MessageLoggers.ConsoleMessageLoggers.TestSuiteLoggerTests.WriteTestStarted_ShouldNotWriteAnything" executed="True" result="Success" success="True" time="0.002" asserts="2" />
+                      <test-case name="FluentBuild.MessageLoggers.ConsoleMessageLoggers.TestSuiteLoggerTests.WriteTestSuiteStarted_ShouldWriteStartedMessage" executed="True" result="Success" success="True" time="0.002" asserts="2" />
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="MessageLoggerTests" executed="True" result="Success" success="True" time="0.039" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.MessageLoggers.MessageLoggerTests.Debug_ShouldCreateMessage" executed="True" result="Success" success="True" time="0.005" asserts="1" />
+                  <test-case name="FluentBuild.MessageLoggers.MessageLoggerTests.Error_ShouldCreateMessage" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                  <test-case name="FluentBuild.MessageLoggers.MessageLoggerTests.EscapeCharacters_ShouldEscapeCharacters" executed="True" result="Success" success="True" time="0.007" asserts="5" />
+                  <test-case name="FluentBuild.MessageLoggers.MessageLoggerTests.EscapeCharacters_ShouldNotEscapePipeRepeatedly" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="FluentBuild.MessageLoggers.MessageLoggerTests.Write_ShouldCreateMessage" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="FluentBuild.MessageLoggers.MessageLoggerTests.WriteHeader_ShouldCloseOldHeaderIfItExists" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                  <test-case name="FluentBuild.MessageLoggers.MessageLoggerTests.WriteHeader_ShouldOpenNewHeaderIfNothingElseHasBeenOpened" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="FluentBuild.MessageLoggers.MessageLoggerTests.WriteTestSuiteStarted_ShouldCreateNewLoggingObject" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                  <test-case name="FluentBuild.MessageLoggers.MessageLoggerTests.WriteWarning_ShouldCreateMessage" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="Namespace" name="MessageProcessing" executed="True" result="Success" success="True" time="0.269" asserts="0">
+                <results>
+                  <test-suite type="TestFixture" name="DefaultMessageProcessorTests" executed="True" result="Success" success="True" time="0.047" asserts="0">
+                    <results>
+                      <test-case name="FluentBuild.MessageLoggers.MessageProcessing.DefaultMessageProcessorTests.ShouldHaveAllMessagesAsErrorWhenProcessErrorCodeNonZero" executed="True" result="Success" success="True" time="0.011" asserts="1" />
+                      <test-case name="FluentBuild.MessageLoggers.MessageProcessing.DefaultMessageProcessorTests.ShouldHaveMessagesAsRegular" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                      <test-case name="FluentBuild.MessageLoggers.MessageProcessing.DefaultMessageProcessorTests.ShouldHaveNonErrorAndErrorMessage" executed="True" result="Success" success="True" time="0.002" asserts="2" />
+                      <test-case name="FluentBuild.MessageLoggers.MessageProcessing.DefaultMessageProcessorTests.ShouldHaveWarningLine" executed="True" result="Success" success="True" time="0.003" asserts="2" />
+                      <test-case name="FluentBuild.MessageLoggers.MessageProcessing.DefaultMessageProcessorTests.ShouldNotProcessUnkownErrorType" executed="True" result="Success" success="True" time="0.006" asserts="0" />
+                      <test-case name="FluentBuild.MessageLoggers.MessageProcessing.DefaultMessageProcessorTests.ShouldProcessErrorMessage" executed="True" result="Success" success="True" time="0.004" asserts="0" />
+                      <test-case name="FluentBuild.MessageLoggers.MessageProcessing.DefaultMessageProcessorTests.ShouldProcessRegularMessage" executed="True" result="Success" success="True" time="0.005" asserts="0" />
+                      <test-case name="FluentBuild.MessageLoggers.MessageProcessing.DefaultMessageProcessorTests.ShouldProcessWarningMessage" executed="True" result="Success" success="True" time="0.003" asserts="0" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="NunitMessageProcessorTests" executed="True" result="Success" success="True" time="0.215" asserts="0">
+                    <results>
+                      <test-case name="FluentBuild.MessageLoggers.MessageProcessing.NunitMessageProcessorTests.DisplayShouldLogTestSuiteStartedAndFinished" executed="True" result="Success" success="True" time="0.205" asserts="0" />
+                      <test-case name="FluentBuild.MessageLoggers.MessageProcessing.NunitMessageProcessorTests.ParseTime_ShouldParseTimeFormat" executed="True" result="Success" success="True" time="0.004" asserts="2" />
+                      <test-case name="FluentBuild.MessageLoggers.MessageProcessing.NunitMessageProcessorTests.ProcessTestSuite" executed="False" result="Ignored">
+                        <reason>
+                          <message><![CDATA[I don't know why this is breaking]]></message>
+                        </reason>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+              <test-suite type="Namespace" name="TeamCityMessageLoggers" executed="True" result="Success" success="True" time="0.030" asserts="0">
+                <results>
+                  <test-suite type="TestFixture" name="TestMessageLoggerTests" executed="True" result="Success" success="True" time="0.015" asserts="0">
+                    <results>
+                      <test-case name="FluentBuild.MessageLoggers.TeamCityMessageLoggers.TestMessageLoggerTests.WriteTestFailed_ShouldOutputTestFailedAndFinishedMessage" executed="True" result="Success" success="True" time="0.006" asserts="1" />
+                      <test-case name="FluentBuild.MessageLoggers.TeamCityMessageLoggers.TestMessageLoggerTests.WriteTestIgnored_ShouldOutputTestIgnoredAndFinishedMessage" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                      <test-case name="FluentBuild.MessageLoggers.TeamCityMessageLoggers.TestMessageLoggerTests.WriteTestPassed_ShouldOutputTestFinishedMessage" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="TestSuiteMessageLoggerTests" executed="True" result="Success" success="True" time="0.011" asserts="0">
+                    <results>
+                      <test-case name="FluentBuild.MessageLoggers.TeamCityMessageLoggers.TestSuiteMessageLoggerTests.WriteFinished_ShouldWriteFinishedMessage" executed="True" result="Success" success="True" time="0.003" asserts="2" />
+                      <test-case name="FluentBuild.MessageLoggers.TeamCityMessageLoggers.TestSuiteMessageLoggerTests.WriteTestStarted_ShouldWriteStartedMessage" executed="True" result="Success" success="True" time="0.002" asserts="2" />
+                      <test-case name="FluentBuild.MessageLoggers.TeamCityMessageLoggers.TestSuiteMessageLoggerTests.WriteTestSuiteStarted_ShouldWriteStartedMessage" executed="True" result="Success" success="True" time="0.002" asserts="2" />
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+          <test-suite type="Namespace" name="Publishing" executed="True" result="Success" success="True" time="0.310" asserts="0">
+            <results>
+              <test-suite type="TestFixture" name="GoogleCodeTests" executed="True" result="Success" success="True" time="0.308" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.Publishing.GoogleCodeTests.CreateAuthorizationToken_ShouldNotFail" executed="True" result="Success" success="True" time="0.003" asserts="0" />
+                  <test-case name="FluentBuild.Publishing.GoogleCodeTests.CreateRequest_ShouldBuildRequest" executed="True" result="Success" success="True" time="0.290" asserts="2" />
+                  <test-case name="FluentBuild.Publishing.GoogleCodeTests.Validate_ShouldNotThrowException" executed="True" result="Success" success="True" time="0.008" asserts="0" />
+                  <test-case name="FluentBuild.Publishing.GoogleCodeTests.ValidateString_ShouldThrowExceptionWhenStringIsEmpty" executed="True" result="Success" success="True" time="0.002" asserts="0" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+          <test-suite type="Namespace" name="Runners" executed="True" result="Success" success="True" time="0.263" asserts="0">
+            <results>
+              <test-suite type="TestFixture" name="ExecutableFailedExceptionTests" executed="True" result="Success" success="True" time="0.003" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.Runners.ExecutableFailedExceptionTests.ShouldPopulateMessage" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="ILMergeTests" executed="True" result="Success" success="True" time="0.090" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.Runners.ILMergeTests.AddBuildArtifactSource_ShouldSetSource" executed="True" result="Success" success="True" time="0.035" asserts="1" />
+                  <test-case name="FluentBuild.Runners.ILMergeTests.AddSource_ShouldSetSource" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                  <test-case name="FluentBuild.Runners.ILMergeTests.BuildArgs_ShouldBuildArgs" executed="True" result="Success" success="True" time="0.006" asserts="3" />
+                  <test-case name="FluentBuild.Runners.ILMergeTests.BuildArgs_ShouldSetFrameworkTypeIfFrameworkIsDotNet4" executed="True" result="Success" success="True" time="0.006" asserts="1" />
+                  <test-case name="FluentBuild.Runners.ILMergeTests.FindExecuteable_ShouldAutoFindIfNotSet" executed="True" result="Success" success="True" time="0.017" asserts="0" />
+                  <test-case name="FluentBuild.Runners.ILMergeTests.FindExecuteable_ShouldThrowExecptionIfItCantBeFound" executed="True" result="Success" success="True" time="0.004" asserts="0" />
+                  <test-case name="FluentBuild.Runners.ILMergeTests.FindExecuteable_ShouldUseSetArg" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                  <test-case name="FluentBuild.Runners.ILMergeTests.OutputTo_ShouldOutpt" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="FluentBuild.Runners.ILMergeTests.OutputToWithBuildArtifact_ShouldOutpt" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="Namespace" name="UnitTesting" executed="True" result="Success" success="True" time="0.145" asserts="0">
+                <results>
+                  <test-suite type="TestFixture" name="NUnitRunnerTests" executed="True" result="Success" success="True" time="0.135" asserts="0">
+                    <results>
+                      <test-case name="FluentBuild.Runners.UnitTesting.NUnitRunnerTests.AddParameter_ShouldAddToInteralDictionary" executed="True" result="Success" success="True" time="0.005" asserts="2" />
+                      <test-case name="FluentBuild.Runners.UnitTesting.NUnitRunnerTests.AddSingleParameter_ShouldAddToInteralDictionary" executed="True" result="Success" success="True" time="0.003" asserts="2" />
+                      <test-case name="FluentBuild.Runners.UnitTesting.NUnitRunnerTests.BuildArgs_ShouldConstructWithFileToTest" executed="True" result="Success" success="True" time="0.010" asserts="1" />
+                      <test-case name="FluentBuild.Runners.UnitTesting.NUnitRunnerTests.BuildArgs_ShouldConstructWithFileToTestAndNameValueParameter" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                      <test-case name="FluentBuild.Runners.UnitTesting.NUnitRunnerTests.BuildArgs_ShouldConstructWithFileToTestAndSingleParameter" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                      <test-case name="FluentBuild.Runners.UnitTesting.NUnitRunnerTests.Execute_ShouldCallExecuteMethodOnMock" executed="True" result="Success" success="True" time="0.023" asserts="0" />
+                      <test-case name="FluentBuild.Runners.UnitTesting.NUnitRunnerTests.Execute_ShouldSetOnErrorStateToFalse" executed="True" result="Success" success="True" time="0.012" asserts="1" />
+                      <test-case name="FluentBuild.Runners.UnitTesting.NUnitRunnerTests.Execute_ShouldSetOnErrorStateToTrue" executed="True" result="Success" success="True" time="0.012" asserts="1" />
+                      <test-case name="FluentBuild.Runners.UnitTesting.NUnitRunnerTests.Execute_ShouldSetWorkingDirectoryOnMockIfManuallySpecifiedInCode" executed="True" result="Success" success="True" time="0.019" asserts="0" />
+                      <test-case name="FluentBuild.Runners.UnitTesting.NUnitRunnerTests.Execute_ShouldThrowExceptionIfPathToExeNotSetAndCanNotBeFound" executed="True" result="Success" success="True" time="0.004" asserts="0" />
+                      <test-case name="FluentBuild.Runners.UnitTesting.NUnitRunnerTests.Execute_ShouldTryToFindPathToNunitIfNotSet" executed="True" result="Success" success="True" time="0.016" asserts="0" />
+                      <test-case name="FluentBuild.Runners.UnitTesting.NUnitRunnerTests.FileToTest_ShouldPopulateInternalFieldAndReturnSelf" executed="True" result="Success" success="True" time="0.002" asserts="2" />
+                      <test-case name="FluentBuild.Runners.UnitTesting.NUnitRunnerTests.PathToConsoleRunner_ShouldPopulateInternalFieldAndReturnSelf" executed="True" result="Success" success="True" time="0.001" asserts="2" />
+                      <test-case name="FluentBuild.Runners.UnitTesting.NUnitRunnerTests.WorkingDirectory_ShouldPopulateInternalFieldAndReturnSelf" executed="True" result="Success" success="True" time="0.001" asserts="2" />
+                      <test-case name="FluentBuild.Runners.UnitTesting.NUnitRunnerTests.XmlOutputTo_ShouldPopulatePropertiesAndReturnSelf" executed="True" result="Success" success="True" time="0.003" asserts="2" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="UnitTestFrameworkRunTests" executed="True" result="Success" success="True" time="0.003" asserts="0">
+                    <results>
+                      <test-case name="FluentBuild.Runners.UnitTesting.UnitTestFrameworkRunTests.Nunit_ShouldCreateNunitRunner" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+              <test-suite type="Namespace" name="Zip" executed="True" result="Success" success="True" time="0.011" asserts="0">
+                <results>
+                  <test-suite type="TestFixture" name="ZipCompressTests" executed="True" result="Success" success="True" time="0.004" asserts="0">
+                    <results>
+                      <test-case name="FluentBuild.Runners.Zip.ZipCompressTests.TestSomething" executed="True" result="Success" success="True" time="0.003" asserts="4" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="ZipTests" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                    <results>
+                      <test-case name="FluentBuild.Runners.Zip.ZipTests.TestSomething" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+          <test-suite type="Namespace" name="Tokenization" executed="True" result="Success" success="True" time="0.024" asserts="0">
+            <results>
+              <test-suite type="TestFixture" name="TokenReplacerTests" executed="True" result="Success" success="True" time="0.022" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.Tokenization.TokenReplacerTests.Replace_ShouldReplaceMultipleTokens" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                  <test-case name="FluentBuild.Tokenization.TokenReplacerTests.Replace_ShouldReplaceToken" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                  <test-case name="FluentBuild.Tokenization.TokenReplacerTests.To_ShouldFailIfFileExists" executed="True" result="Success" success="True" time="0.006" asserts="0" />
+                  <test-case name="FluentBuild.Tokenization.TokenReplacerTests.To_ShouldWriteOutFileIfFileDoesNotExist" executed="True" result="Success" success="True" time="0.008" asserts="0" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+          <test-suite type="Namespace" name="Utilities" executed="True" result="Success" success="True" time="0.224" asserts="0">
+            <results>
+              <test-suite type="TestFixture" name="ExecuteableTests" executed="True" result="Success" success="True" time="0.026" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.Utilities.ExecuteableTests.CreateProcess_Should_Build_Process" executed="True" result="Success" success="True" time="0.014" asserts="1" />
+                  <test-case name="FluentBuild.Utilities.ExecuteableTests.Executable_ShouldSetProperly" executed="True" result="Success" success="True" time="0.002" asserts="2" />
+                  <test-case name="FluentBuild.Utilities.ExecuteableTests.ShouldConstructProperly" executed="True" result="Success" success="True" time="0.003" asserts="3" />
+                  <test-case name="FluentBuild.Utilities.ExecuteableTests.ShouldPopulateWorkingDirectoryViaArtifact" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="FileFinderTests" executed="True" result="Success" success="True" time="0.028" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.Utilities.FileFinderTests.Find_ShouldSearchFileSystem" executed="True" result="Success" success="True" time="0.014" asserts="0" />
+                  <test-case name="FluentBuild.Utilities.FileFinderTests.Find_ShouldSearchFileSystemRecursively" executed="True" result="Success" success="True" time="0.011" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="FrameworkVersionTests" executed="True" result="Success" success="True" time="0.068" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.Utilities.FrameworkVersionTests.GetPathToFrameworkInstall_ShouldNotThrowException" executed="True" result="Success" success="True" time="0.041" asserts="0" />
+                  <test-case name="FluentBuild.Utilities.FrameworkVersionTests.GetPathToFrameworkInstall_ShouldThrowExceptionIfNotFound" executed="True" result="Success" success="True" time="0.007" asserts="0" />
+                  <test-case name="FluentBuild.Utilities.FrameworkVersionTests.GetPathToSdk_ShouldNotThrowException" executed="True" result="Success" success="True" time="0.007" asserts="0" />
+                  <test-case name="FluentBuild.Utilities.FrameworkVersionTests.GetPathToSdk_ShouldThrowExceptionIfNoSdkFound" executed="True" result="Success" success="True" time="0.008" asserts="0" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="RegistryKeyValueFinderTests" executed="True" result="Success" success="True" time="0.090" asserts="0">
+                <results>
+                  <test-case name="FluentBuild.Utilities.RegistryKeyValueFinderTests.ShouldOpenLocalMachineKeyForSoftwareTwice" executed="True" result="Success" success="True" time="0.090" asserts="0" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
