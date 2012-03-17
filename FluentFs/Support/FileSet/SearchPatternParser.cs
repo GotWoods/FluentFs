@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace FluentFs.Support.FileSet
 {
-    internal interface ISearchPatternParser
+    public interface ISearchPatternParser
     {
         void Parse(string pattern);
         string SearchPattern { get; set; }

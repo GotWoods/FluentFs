@@ -1,5 +1,4 @@
 ﻿using FluentFs.Core;
-
 namespace FluentFs
 {
     public class SampleUsages
