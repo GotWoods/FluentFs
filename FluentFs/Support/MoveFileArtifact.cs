@@ -1,7 +1,8 @@
 ﻿using System.IO;
-using FluentBuild.FilesAndDirectories;
+using Directory = FluentFs.Core.Directory;
+using File = FluentFs.Core.File;
 
-namespace FluentFileSystem
+namespace FluentFs.Support
 {
     ///<summary>
     /// Moves a file artifact to a destination

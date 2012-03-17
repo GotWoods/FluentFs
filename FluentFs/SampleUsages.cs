@@ -1,8 +1,10 @@
-﻿namespace FluentFileSystem
+﻿using FluentFs.Core;
+
+namespace FluentFs
 {
     public class SampleUsages
     {
-        public void File()
+        public void FileExamples()
         {
             var file = new File(@"c:\temp\web.config");
             file.Copy.To(@"c:\nottemp\");
@@ -16,7 +18,7 @@
             file.Rename.ContinueOnError.To("blah2.txt");
         }
 
-        public void Directory()
+        public void DirectoryExamples()
         {
             var dir = new Directory(@"c:\temp");
             dir.Create(OnError.Continue);
@@ -29,7 +31,7 @@
             var file = dir.File("web.config");
         }
 
-        public void Fileset()
+        public void FilesetExamples()
         {
             var fs = new Core.FileSet().Include("c:\\origin\\*.dll").Exclude("*.config").RecurseAllSubDirectories;
             var filesMatching = fs.Files; //gets all dll files and excludes all config files

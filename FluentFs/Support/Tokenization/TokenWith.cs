@@ -1,6 +1,6 @@
 using System;
 
-namespace FluentFileSystem.Tokenization
+namespace FluentFs.Support.Tokenization
 {
     ///<summary>
     /// Sets the replacement text

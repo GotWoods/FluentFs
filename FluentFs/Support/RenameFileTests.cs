@@ -1,9 +1,10 @@
 ﻿using System.IO;
-using FluentBuild.FilesAndDirectories;
+using FluentFs.Support;
 using NUnit.Framework;
 using Rhino.Mocks;
+using File = FluentFs.Core.File;
 
-namespace FluentFileSystem
+namespace FluentFs.Support
 {
     ///<summary />
 	[TestFixture]

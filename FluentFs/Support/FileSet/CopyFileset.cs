@@ -1,7 +1,7 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
+using Directory = FluentFs.Core.Directory;
 
-namespace FluentFileSystem.FileSet
+namespace FluentFs.Support.FileSet
 {
     ///<summary>
     /// Copies the fileset
@@ -26,7 +26,7 @@ namespace FluentFileSystem.FileSet
         ///</summary>
         ///<param name="destination">A Directory that will recieve the files</param>
         ///<returns></returns>
-        public Core.FileSet To(Directory destination)
+        public Core.FileSet To(Core.Directory destination)
         {
             return To(destination.ToString());
         }

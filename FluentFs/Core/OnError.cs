@@ -1,4 +1,4 @@
-﻿namespace FluentFileSystem
+﻿namespace FluentFs.Core
 {
     ///<summary>
     /// Used to set the behavior of what to do on errors

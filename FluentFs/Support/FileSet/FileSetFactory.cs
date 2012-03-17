@@ -1,6 +1,6 @@
-﻿using FluentFileSystem.Core;
+﻿using FluentFs.Core;
 
-namespace FluentFileSystem.FileSet
+namespace FluentFs.Support.FileSet
 {
     //Filesets often become created in code so this allows the mocking of filesets
     ///<summary>

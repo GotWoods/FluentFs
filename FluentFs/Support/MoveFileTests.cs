@@ -1,8 +1,8 @@
-﻿using FluentBuild.FilesAndDirectories;
+﻿using FluentFs.Core;
 using NUnit.Framework;
 using Rhino.Mocks;
 
-namespace FluentFileSystem
+namespace FluentFs.Support
 {
     [TestFixture]
     public class MoveFileTests

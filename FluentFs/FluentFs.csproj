@@ -8,8 +8,8 @@
     <ProjectGuid>{C47CC7AD-F1D5-4817-9495-7756C41CC91F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FluentFileSystem</RootNamespace>
-    <AssemblyName>FluentFileSystem</AssemblyName>
+    <RootNamespace>FluentFs</RootNamespace>
+    <AssemblyName>FluentFs</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

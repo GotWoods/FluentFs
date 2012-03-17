@@ -1,8 +1,7 @@
 ﻿using System.IO;
-using FluentFileSystem;
-using File = FluentFileSystem.File;
+using File = FluentFs.Core.File;
 
-namespace FluentBuild.FilesAndDirectories
+namespace FluentFs.Support
 {
     ///<summary>
     /// Renames a build artifact

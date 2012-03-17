@@ -1,7 +1,7 @@
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace FluentFileSystem.FileSet
+namespace FluentFs.Support.FileSet
 {
     internal interface ISearchPatternParser
     {

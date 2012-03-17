@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace FluentFileSystem.FileSet
+namespace FluentFs.Support.FileSet
 {
     internal interface IFileSystemUtility
     {

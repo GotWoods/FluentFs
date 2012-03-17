@@ -1,9 +1,9 @@
-using FluentBuild.FilesAndDirectories;
-using FluentFileSystem.Tokenization;
+using FluentFs.Core;
+using FluentFs.Support.Tokenization;
 using NUnit.Framework;
 using Rhino.Mocks;
 
-namespace FluentFileSystem
+namespace FluentFs.Support
 {
     ///<summary />
     [TestFixture]
@@ -35,7 +35,7 @@ namespace FluentFileSystem
         [Test]
         public void ArtifactCopyShouldRenameFile()
         {
-            var destinationArtifact = new File(_destination);
+            var destinationArtifact = new Core.File(_destination);
             _copyEngine.To(destinationArtifact);
             _fileSystemWrapper.AssertWasCalled(x => x.Copy(_source, _destination));
         }

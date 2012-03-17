@@ -1,4 +1,6 @@
-﻿namespace FluentFileSystem
+﻿using FluentFs.Core;
+
+namespace FluentFs.Support
 {
     ///<summary>
     /// Represents a class that has continue/fail on error behavior

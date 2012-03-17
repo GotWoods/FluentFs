@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using Rhino.Mocks;
 
-namespace FluentFileSystem.Tokenization
+namespace FluentFs.Support.Tokenization
 {
     ///<summary />
 	[TestFixture]

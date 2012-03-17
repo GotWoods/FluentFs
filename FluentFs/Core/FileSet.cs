@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using FluentFileSystem.FileSet;
+using FluentFs.Support.FileSet;
 
-namespace FluentFileSystem.Core
+namespace FluentFs.Core
 {
     ///<summary>
     /// Represents a series of files

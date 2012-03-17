@@ -1,6 +1,6 @@
-using FluentBuild.FilesAndDirectories;
+using FluentFs.Support;
 
-namespace FluentFileSystem
+namespace FluentFs.Core
 {
     ///<summary>
     /// Represents a file used or created in a build

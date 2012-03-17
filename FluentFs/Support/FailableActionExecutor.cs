@@ -1,6 +1,7 @@
 ﻿using System;
+using FluentFs.Core;
 
-namespace FluentFileSystem
+namespace FluentFs.Support
 {
     internal class FailableActionExecutor
     {

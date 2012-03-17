@@ -1,9 +1,10 @@
 using System;
 using System.IO;
-using FluentBuild.FilesAndDirectories;
-using FluentFileSystem.Tokenization;
+using FluentFs.Support.Tokenization;
+using Directory = FluentFs.Core.Directory;
+using File = FluentFs.Core.File;
 
-namespace FluentFileSystem
+namespace FluentFs.Support
 {
     ///<summary>
     /// Copies a file
@@ -11,12 +12,12 @@ namespace FluentFileSystem
     public class CopyFile : Failable<CopyFile>
     {
         private readonly IFileSystemWrapper _fileSystemWrapper;
-        private readonly File source;
+        private readonly File _source;
 
         internal CopyFile(IFileSystemWrapper fileSystemWrapper, File artifact)
         {
             _fileSystemWrapper = fileSystemWrapper;
-            source = artifact;
+            _source = artifact;
         }
 
         internal CopyFile(File artifact) : this(new FileSystemWrapper(), artifact)
@@ -54,7 +55,7 @@ namespace FluentFileSystem
             
             if (!Path.HasExtension(destination))
             {
-                destinationFileName = Path.GetFileName(source.ToString());
+                destinationFileName = Path.GetFileName(_source.ToString());
                 destinationDirectory = destination;
             }
             else
@@ -66,7 +67,7 @@ namespace FluentFileSystem
 // ReSharper disable AssignNullToNotNullAttribute
             var dest = Path.Combine(destinationDirectory, destinationFileName);
 // ReSharper restore AssignNullToNotNullAttribute
-            FailableActionExecutor.DoAction(base.OnError, _fileSystemWrapper.Copy, source.ToString(), dest);
+            FailableActionExecutor.DoAction(base.OnError, _fileSystemWrapper.Copy, _source.ToString(), dest);
         }
 
 
@@ -78,7 +79,7 @@ namespace FluentFileSystem
         /// <example>tokens in the file are surrounded by @ signs. So ReplaceToken("name") would replace everything in a file with @name@</example>
         public TokenWith ReplaceToken(string token)
         {
-            return new TokenReplacer(_fileSystemWrapper.ReadAllText(source.ToString())).ReplaceToken(token);
+            return new TokenReplacer(_fileSystemWrapper.ReadAllText(_source.ToString())).ReplaceToken(token);
         }
     }
 }

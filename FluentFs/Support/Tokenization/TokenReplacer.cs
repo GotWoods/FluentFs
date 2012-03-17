@@ -1,6 +1,7 @@
 using System.IO;
 
-namespace FluentFileSystem.Tokenization
+
+namespace FluentFs.Support.Tokenization
 {
     ///<summary>
     /// Replaces tokens in a file

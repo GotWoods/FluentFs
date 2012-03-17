@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace FluentFileSystem.FileSet
+namespace FluentFs.Support.FileSet
 {
     ///<summary />
 	[TestFixture]

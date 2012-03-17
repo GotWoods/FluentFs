@@ -1,4 +1,4 @@
-﻿namespace FluentFileSystem.FileSet
+﻿namespace FluentFs.Support.FileSet
 {
     ///<summary>
     /// Allows the user to pick certain attributes to add to a folder

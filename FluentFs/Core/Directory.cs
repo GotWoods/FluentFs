@@ -1,8 +1,8 @@
 using System.IO;
-using FluentBuild.FilesAndDirectories;
-using FluentFileSystem.FileSet;
+using FluentFs.Support;
+using FluentFs.Support.FileSet;
 
-namespace FluentFileSystem
+namespace FluentFs.Core
 {
 
     /// <summary>

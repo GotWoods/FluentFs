@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-namespace FluentFileSystem
+namespace FluentFs.Support
 {
-    internal interface IFileSystemWrapper
+    public interface IFileSystemWrapper
     {
         void Copy(string source, string destination);
         bool FileExists(string path);

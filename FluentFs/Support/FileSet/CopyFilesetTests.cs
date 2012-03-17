@@ -1,7 +1,8 @@
-﻿using NUnit.Framework;
+﻿using FluentFs.Core;
+using NUnit.Framework;
 using Rhino.Mocks;
 
-namespace FluentFileSystem.FileSet
+namespace FluentFs.Support.FileSet
 {
     ///<summary />
 	[TestFixture]
@@ -18,7 +19,7 @@ namespace FluentFileSystem.FileSet
             var subject = new CopyFileset(fileSet, fs);
 
             string destination = @"c:\destination";
-            var dest = new Directory(destination);
+            var dest = new Core.Directory(destination);
             subject.To(dest);
 
             fs.AssertWasCalled(x=>x.Copy(fileSet.Files[0], destination + "\\test1.txt"));
