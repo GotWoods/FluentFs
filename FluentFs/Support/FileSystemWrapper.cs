@@ -17,7 +17,7 @@ namespace FluentFs.Support
         IEnumerable<string> GetFilesIn(string directory);
     }
 
-    internal class FileSystemWrapper : IFileSystemWrapper
+    public class FileSystemWrapper : IFileSystemWrapper
     {
         public void Copy(string source, string destination)
         {

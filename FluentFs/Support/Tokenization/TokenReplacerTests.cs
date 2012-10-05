@@ -19,6 +19,17 @@ namespace FluentFs.Support.Tokenization
             Assert.That(results, Is.EqualTo("Hello john how are you today?"));
         }
 
+    [Test]
+    public void Replace_ShouldReplaceCustomToken()
+    {
+        const string input = "Hello %name% how are you today?";
+        const string name = "john";
+        var replacement = new TokenReplacer(input);
+        var results = replacement.ReplaceToken("name", "%").With(name).ToString();
+        Assert.That(results, Is.EqualTo("Hello john how are you today?"));
+    }
+
+
         ///<summary />
 	[Test]
         public void Replace_ShouldReplaceMultipleTokens()

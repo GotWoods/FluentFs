@@ -11,6 +11,7 @@ namespace FluentFs.Support.Tokenization
         private readonly IFileSystemWrapper _fileSystemWrapper;
         internal string Input;
         internal string Token;
+        internal string Delimeter;
 
         internal TokenReplacer(string input) : this(new FileSystemWrapper(), input)
         {
@@ -20,11 +21,12 @@ namespace FluentFs.Support.Tokenization
         {
             _fileSystemWrapper = fileSystemWrapper;
             Input = input;
+            Delimeter = "@";
         }
 
 
         ///<summary>
-        /// Replaces a token in a string
+        /// Replaces a token in a string using a default delimiter of @
         ///</summary>
         ///<param name="token">the token to replace (without the delimiter)</param>
         ///<returns></returns>
@@ -33,6 +35,19 @@ namespace FluentFs.Support.Tokenization
             Token = token;
             return new TokenWith(this);
         }
+
+        ///<summary>
+        /// Replaces a token in a string
+        ///</summary>
+        ///<param name="token">the token to replace (without the delimiter)</param>
+        ///<param name="delimiter">the delimiter that surrounds the token</param>
+        ///<returns></returns>
+        public TokenWith ReplaceToken(string token, string delimiter)
+        {
+            Token = token;
+            return new TokenWith(this, delimiter);
+        }
+
 
         ///<summary>
         /// Outputs the token replaced to a file

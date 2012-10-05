@@ -8,7 +8,7 @@ namespace FluentFs.Core
     public class File
     {
         private readonly IFileSystemWrapper _fileSystemWrapper;
-        internal string Path;
+        public string Path { get; set; }
 
         ///<summary>
         ///</summary>
