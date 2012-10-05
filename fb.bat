@@ -1,0 +1,1 @@
+lib\FluentBuild\fb.exe FluentFs.Build
