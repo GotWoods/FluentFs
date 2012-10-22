@@ -109,7 +109,7 @@ namespace FluentFs.Core
         public Core.FileSet Files(string filter)
         {
             var fileSet = _fileSetFactory.Create();
-            return fileSet.Include(Path.Combine(_path, filter));
+            return fileSet.Include(new Directory(_path)).Filter(filter);
         }
 
         /// <summary>
@@ -119,7 +119,7 @@ namespace FluentFs.Core
         public Core.FileSet Files()
         {
             var fileSet = _fileSetFactory.Create();
-            return fileSet.Include(_path);
+            return fileSet.Include(new Directory(_path));
         }
     }
 }

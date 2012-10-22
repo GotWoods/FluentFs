@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using FluentFs.Support.FileSet;
 
 namespace FluentFs.Core
@@ -24,7 +25,7 @@ namespace FluentFs.Core
         ///</summary>
         ///<param name="path">path to files to include</param>
         FileSet Include(File path);
-
+        
         ///<summary>
         /// Includes a path in the fileset.
         ///</summary>
@@ -32,9 +33,9 @@ namespace FluentFs.Core
         FileSet Include(string path);
 
         ///<summary>
-        /// Adds an exclude filter
+        /// Excludes a path in the fileset.
         ///</summary>
-        ///<param name="path">exclude path</param>
+        ///<param name="path">path to files to exclude</param>
         FileSet Exclude(string path);
 
         ///<summary>
@@ -42,12 +43,18 @@ namespace FluentFs.Core
         ///</summary>
         ///<param name="path">The buildfolder representing the path to be used</param>
         FileSet Include(Directory path);
-        
+
         ///<summary>
         /// Sets the exclude to be a folder and opens additional options
         ///</summary>
         ///<param name="path">The buildfolder representing the path to be used</param>
         FileSet Exclude(Directory path);
+
+        ///<summary>
+        /// Sets the exclude to be a file and opens additional options
+        ///</summary>
+        ///<param name="path">The file representing the path to be used</param>
+        FileSet Exclude(File path);
     }
 
     ///<summary>
@@ -55,10 +62,10 @@ namespace FluentFs.Core
     ///</summary>
     public class FileSet : IFileSet
     {
+        private readonly IFileSystemUtility _utility;
         internal List<string> Exclusions = new List<string>();
         internal List<string> Inclusions = new List<string>();
-        
-        private readonly IFileSystemUtility _utility;
+
         private bool _isInclusion;
 
         ///<summary>
@@ -73,44 +80,6 @@ namespace FluentFs.Core
             _utility = utility;
         }
 
-        #region IFileSet Members
-        public ReadOnlyCollection<string> Files
-        {
-            get
-            {
-                ProcessPendings();
-                var files = new List<string>();
-                files.AddRange(DetermineActualFiles(Inclusions));
-                foreach (var exclusion in DetermineActualFiles(Exclusions))
-                {
-                    files.Remove(exclusion);
-                }
-                return files.AsReadOnly();
-            }
-        }
-
-        internal IEnumerable<string> DetermineActualFiles(List<string> input)
-        {
-            foreach (var path in input)
-            {
-                if (path.IndexOf('*') == -1)
-                {
-                    yield return path;
-                }
-                else
-                {
-                    var allFilesMatching = _utility.GetAllFilesMatching(path);
-                    if (allFilesMatching != null)
-                    {
-                        foreach (var match in allFilesMatching)
-                        {
-                            yield return match;
-                        }
-                    }
-                }
-            }
-        }
-
         protected internal virtual string PendingInclude { get; set; }
         protected internal virtual string PendingExclude { get; set; }
 
@@ -123,33 +92,62 @@ namespace FluentFs.Core
             get
             {
                 if (_isInclusion)
-                    PendingInclude = PendingInclude + "\\**\\";
+                    PendingInclude = Path.Combine(PendingInclude, "**");
                 else
-                    PendingExclude = PendingExclude + "\\**\\";
+                    PendingExclude = Path.Combine(PendingExclude,"**");
                 return this;
             }
         }
 
-        ///<summary>
-        /// Applies a filter to use when searching for files
-        ///</summary>
-        ///<param name="filter">A wildcard filter (e.g. *.cs)</param>
-        public FileSet Filter(string filter)
+        #region IFileSet Members
+
+        public ReadOnlyCollection<string> Files
         {
-            if (_isInclusion)
-                PendingInclude = PendingInclude + "\\" + filter;
-            else
-                PendingExclude = PendingExclude + "\\" + filter;
-            ProcessPendings();
-            return this;
+            get
+            {
+                ProcessPendings();
+                var files = new List<string>();
+                files.AddRange(DetermineActualFiles(Inclusions));
+                foreach (string exclusion in DetermineActualFiles(Exclusions))
+                {
+                    files.Remove(exclusion);
+                }
+                return files.AsReadOnly();
+            }
         }
 
+        public FileSet Include(File path)
+        {
+            return ProcessInclude(path.ToString());
+        }
 
         public FileSet Include(Directory path)
         {
             _isInclusion = true;
             ProcessPendings();
             PendingInclude = path.ToString();
+            return this;
+        }
+
+        public FileSet Include(string path)
+        {
+            ProcessPendings();
+            Inclusions.Add(path);
+            return this;
+        }
+
+        private FileSet ProcessInclude(string path)
+        {
+            ProcessPendings();
+            Inclusions.Add(path);
+            return this;
+        }
+
+        public FileSet Exclude(File path)
+        {
+            _isInclusion = false;
+            ProcessPendings();
+            PendingExclude = path.ToString();
             return this;
         }
 
@@ -161,38 +159,15 @@ namespace FluentFs.Core
             return this;
         }
 
-
-        public FileSet Include(File path)
+        public FileSet Exclude(string path)
         {
-            return Include(path.ToString());
-        }
-
-        public FileSet Include(string path)
-        {
+            _isInclusion = false;
             ProcessPendings();
-            Inclusions.Add(path);
+            PendingExclude = path;
             return this;
         }
 
-        
-        internal void ProcessPendings()
-        {
-            if (!string.IsNullOrEmpty(PendingExclude))
-            {
-                var tmp = PendingExclude;
-                PendingExclude = string.Empty;
-                Exclude(tmp);
-            }
-
-            if (!string.IsNullOrEmpty(PendingInclude))
-            {
-                var tmp = PendingInclude;
-                PendingInclude = string.Empty;
-                Include(tmp);
-            }
-        }
-
-        public FileSet Exclude(string path)
+        private FileSet ProcessExclude(string path)
         {
             ProcessPendings();
             Exclusions.Add(path);
@@ -209,5 +184,63 @@ namespace FluentFs.Core
         }
 
         #endregion
+
+        internal IEnumerable<string> DetermineActualFiles(List<string> input)
+        {
+            foreach (string path in input)
+            {
+                if (path.IndexOf('*') == -1)
+                {
+                    yield return path;
+                }
+                else
+                {
+                    IList<string> allFilesMatching = _utility.GetAllFilesMatching(path);
+                    if (allFilesMatching != null)
+                    {
+                        foreach (string match in allFilesMatching)
+                        {
+                            yield return match;
+                        }
+                    }
+                }
+            }
+        }
+
+        ///<summary>
+        /// Applies a filter to use when searching for files
+        ///</summary>
+        ///<param name="filter">A wildcard filter (e.g. *.cs)</param>
+        public FileSet Filter(string filter)
+        {
+            if (_isInclusion)
+                PendingInclude = Path.Combine(PendingInclude, filter);
+            else
+                PendingExclude = Path.Combine(PendingExclude,filter);
+            ProcessPendings();
+            return this;
+        }
+
+    
+
+
+        internal void ProcessPendings()
+        {
+            if (!string.IsNullOrEmpty(PendingExclude))
+            {
+                string tmp = PendingExclude;
+                PendingExclude = string.Empty;
+                ProcessExclude(tmp);
+            }
+
+            if (!string.IsNullOrEmpty(PendingInclude))
+            {
+                string tmp = PendingInclude;
+                PendingInclude = string.Empty;
+                ProcessInclude(tmp);
+            }
+        }
+
+      
     }
 }

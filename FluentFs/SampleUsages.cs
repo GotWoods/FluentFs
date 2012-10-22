@@ -32,7 +32,7 @@ namespace FluentFs
 
         public void FilesetExamples()
         {
-            var fs = new Core.FileSet().Include("c:\\origin\\*.dll").Exclude("*.config").RecurseAllSubDirectories;
+            var fs = new Core.FileSet().Include(new Directory("c:\\origin\\")).Filter("*.dll").Exclude(new File("*.config")).RecurseAllSubDirectories;
             var filesMatching = fs.Files; //gets all dll files and excludes all config files
             fs.Copy.To(@"c:\temp"); //copies all files matching to the destination 
         }

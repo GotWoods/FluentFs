@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 
@@ -29,6 +30,8 @@ namespace FluentFs.Support.FileSet
 
         public IList<string> GetAllFilesMatching(string filter)
         {
+            Console.WriteLine(filter);
+            Debug.WriteLine(filter);
             //a full file i.e. c:\temp\file1.txt
             if ((filter.LastIndexOf("*") == -1) && (Path.HasExtension(filter)))
             {

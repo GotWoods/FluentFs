@@ -14,8 +14,8 @@ namespace FluentFs.Support.FileSet
         {
             var fs = MockRepository.GenerateStub<IFileSystemWrapper>();
             var fileSet = new Core.FileSet();
-            fileSet.Include(@"c:\temp\test1.txt");
-            fileSet.Include(@"c:\temp\test2.txt");
+            fileSet.Include(new File(@"c:\temp\test1.txt"));
+            fileSet.Include(new File(@"c:\temp\test2.txt"));
             var subject = new CopyFileset(fileSet, fs);
 
             string destination = @"c:\destination";
